@@ -1,0 +1,43 @@
+{
+  "name": "eaturner-challenge-app-api",
+  "version": "1.0.0",
+  "description": "EATurner Challenge App API",
+  "main": "start.js",
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "scripts": {
+    "start": "node start.js",
+    "server": "nodemon start.js",
+    "client": "npm start --prefix client",
+    "clientinstall": "npm install --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.2.2",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.1",
+    "mongoose": "^5.6.10"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.2",
+    "eslint": "^6.5.1",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "supertest": "^4.0.2"
+  }
+}
